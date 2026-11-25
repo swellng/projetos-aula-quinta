@@ -26,7 +26,13 @@ O Estuda+ separa a interface React (`../../atividade-react`) da API Express (`ap
 
 O arquivo `api/render.yaml` configura o serviço Render. Para a Vercel, configure `atividade-react` como diretório raiz, `npm run build` como comando de build, `dist` como saída e `VITE_API_BASE_URL` como URL do serviço Render. No Render, configure `FRONTEND_ORIGIN` para permitir chamadas do domínio Vercel.
 
-**URLs públicas:** preencher depois de criar os serviços nas contas do estudante. Não há URL de API Render confirmada neste relatório. A URL Vercel anteriormente usada para a versão anterior do app é `https://atividade-react-rfvm2cmoh-swell4.vercel.app`; confirme uma nova publicação após conectar a API.
+**URLs públicas:**
+
+- Front-end Vercel: [https://atividade-react-inky.vercel.app](https://atividade-react-inky.vercel.app)
+- API Render: [https://projetos-aula-quinta.onrender.com](https://projetos-aula-quinta.onrender.com)
+- Verificação de saúde: [https://projetos-aula-quinta.onrender.com/api/health](https://projetos-aula-quinta.onrender.com/api/health)
+
+A variável `VITE_API_BASE_URL` foi adicionada ao ambiente Production da Vercel. Uma nova implantação precisa terminar para que a versão pública passe a usá-la.
 
 ## Evidências a capturar após publicação
 

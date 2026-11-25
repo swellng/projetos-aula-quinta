@@ -42,7 +42,7 @@ npm install
 npm run dev
 ```
 
-O front-end usa `http://localhost:3000` como API padrão. Para trocar, crie `atividade-react/.env.local` com `VITE_API_BASE_URL=https://seu-servico.onrender.com`. Gere uma versão de produção com `npm run build`.
+O front-end usa `http://localhost:3000` como API padrão. Para trocar, crie `atividade-react/.env.local` com `VITE_API_BASE_URL=https://seu-servico.onrender.com`. Na implantação Render criada para esta entrega, a API está em `https://projetos-aula-quinta.onrender.com`; essa URL também deve ficar na variável `VITE_API_BASE_URL` da Vercel (ambiente Production). Gere uma versão de produção com `npm run build`.
 
 ## Publicação
 
