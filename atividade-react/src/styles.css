@@ -25,6 +25,42 @@ button { cursor: pointer; }
 .brand-mark { display: grid; width: 34px; height: 34px; place-items: center; border-radius: 11px; background: var(--purple); color: white; font-size: 15px; letter-spacing: -1px; }
 .brand-accent { color: var(--purple); }
 .topbar-note { color: var(--muted); font-size: 13px; }
+.main-nav { display: flex; align-items: center; gap: 8px; }
+.main-nav a { padding: 9px 12px; border-radius: 9px; color: #777b8e; font-size: 12px; font-weight: 600; text-decoration: none; }
+.main-nav a.active, .main-nav a:hover { background: #f0edff; color: var(--purple-dark); }
+.api-time { margin-top: 16px; color: #777b8e; font-size: 12px; }
+.api-time strong { color: var(--purple-dark); }
+.page-intro { margin: 0 0 22px; color: #72768b; font-size: 14px; line-height: 1.7; }
+.section-title { margin: 0 0 15px; }
+.note-form { display: grid; gap: 11px; margin: 20px 0 26px; }
+.note-form input, .note-form textarea { width: 100%; padding: 12px 14px; border: 1px solid #e9e9f1; border-radius: 10px; background: #fafafd; color: var(--ink); }
+.note-form textarea { min-height: 120px; resize: vertical; }
+.note-card { padding: 19px; border: 1px solid #ececf3; border-radius: 14px; background: #fff; }
+.note-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 13px; }
+.note-card h3 { margin: 0 0 9px; font: 700 16px Manrope, sans-serif; }
+.note-card p { color: #72768b; font-size: 13px; line-height: 1.6; white-space: pre-wrap; }
+.note-actions { display: flex; justify-content: flex-end; gap: 8px; }
+.note-actions button { padding: 7px 10px; border: 1px solid #e9e9f1; border-radius: 8px; background: #fff; color: var(--purple-dark); }
+.note-actions .danger { color: #b44453; }
+.status-message { padding: 11px 13px; border-radius: 9px; background: #f0edff; color: var(--purple-dark); font-size: 13px; }
+.status-message.error { background: #fff0f0; color: #a23b48; }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+.concept-card { padding: 17px; border: 1px solid #ececf3; border-radius: 13px; background: #fff; }
+.concept-card strong { display: block; margin-bottom: 7px; color: var(--purple-dark); }
+.concept-card p { margin: 0; color: #72768b; font-size: 12px; line-height: 1.6; }
+.api-note { margin: 14px 0 0; color: #777b8e; font-size: 12px; }
+.form-actions { display: flex; flex-wrap: wrap; gap: 9px; }
+.secondary-button, .danger-button, .back-link { display: inline-flex; align-items: center; justify-content: center; padding: 9px 12px; border: 1px solid #e5e5ef; border-radius: 8px; background: #fff; color: #666a80; font-size: 12px; font-weight: 600; text-decoration: none; }
+.secondary-button:hover, .back-link:hover { border-color: #c9bfff; color: var(--purple-dark); }
+.danger-button { color: #b44453; }
+.danger-button:hover { background: #fff1f1; }
+.notes-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.note-card-copy time { color: #a0a3b0; font-size: 11px; }
+.error-message { background: #fff0f0; color: #a23b48; }
+.about-workspace .concept-grid > article { padding: 17px; border: 1px solid #ececf3; border-radius: 13px; background: #fff; }
+.about-workspace .concept-grid strong { display: block; margin-bottom: 7px; color: var(--purple-dark); }
+.about-workspace .concept-grid span { color: #72768b; font-size: 12px; line-height: 1.6; }
+.back-link { margin-top: 22px; }
 
 .hero { position: relative; display: flex; min-height: 290px; align-items: center; justify-content: space-between; gap: 30px; padding: 48px 0 42px; }
 .date-label, .eyebrow { margin: 0 0 12px; color: var(--purple); font-size: 11px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; }
@@ -85,6 +121,8 @@ button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px s
 @media (max-width: 680px) {
   .app-shell { width: min(100% - 28px, 520px); }
   .topbar { height: 68px; }
+  .main-nav { gap: 0; }
+  .main-nav a { padding: 8px; font-size: 11px; }
   .hero { min-height: auto; flex-direction: column; align-items: stretch; gap: 24px; padding: 38px 0 27px; }
   h1 { font-size: 38px; }
   .progress-card { width: 100%; flex-basis: auto; }
