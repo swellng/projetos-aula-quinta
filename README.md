@@ -22,3 +22,12 @@ Por fim, o projeto pode ser publicado com a **Vercel**. Ao conectar o repositór
 ## Projeto inicial
 
 Abra `index.html` no navegador. O botão da página demonstra uma interação implementada em JavaScript.
+
+## Atividades seguintes
+
+- [Estuda+ — React, tarefas, rotas e notas](atividade-react/README.md)
+- [Aulas 04 e 05 — API Express, relatório e coleção Postman](atividades/aula04-05/relatorio-entrega.md)
+- [Aula 04 — análise de 10 projetos com APIs](atividades/aula04-apis/analise-10-projetos.md)
+- [Aula 06 — planejamento e quadro Kanban](atividades/aula06-gestao/planejamento-estuda.md)
+- [Aula 07 — Box Model e Flexbox](atividades/aula07-css-box-flex/README.md)
+- [Aula 07 — Tailwind CSS](atividades/aula07-tailwind/README.md)
