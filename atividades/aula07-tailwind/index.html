@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demonstração de classes utilitárias do Tailwind CSS.">
+  <title>Estuda+ · Tailwind CSS</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen bg-slate-100 font-sans text-slate-800 antialiased">
+  <header class="border-b border-slate-200 bg-white">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5" aria-label="Navegação principal">
+      <a class="text-xl font-extrabold tracking-tight text-indigo-700" href="#inicio">Estuda<span class="text-emerald-500">+</span></a>
+      <a class="rounded-full bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-700 hover:bg-indigo-100" href="#recursos">Ver recursos</a>
+    </nav>
+  </header>
+  <main id="inicio" class="mx-auto max-w-6xl px-6 py-12 md:py-20">
+    <section class="grid items-center gap-10 md:grid-cols-2">
+      <div>
+        <p class="mb-4 inline-block rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-bold uppercase tracking-widest text-emerald-800">Seu espaço de aprendizagem</p>
+        <h1 class="max-w-xl text-4xl font-black leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">Estude com <span class="text-indigo-600">mais foco</span> e leveza.</h1>
+        <p class="mt-5 max-w-lg text-base leading-7 text-slate-600">Organize tarefas e anotações em um só lugar. Um painel simples para acompanhar cada passo da sua rotina de estudos.</p>
+        <div class="mt-8 flex flex-wrap gap-3"><a class="rounded-xl bg-indigo-600 px-5 py-3 font-bold text-white shadow-lg shadow-indigo-200 hover:bg-indigo-700" href="#recursos">Conhecer o painel</a><a class="rounded-xl border border-slate-300 bg-white px-5 py-3 font-bold text-slate-700 hover:border-indigo-300" href="../../atividade-react/">Abrir aplicação React</a></div>
+      </div>
+      <aside class="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-200/70 sm:p-8" aria-label="Resumo semanal">
+        <div class="flex items-center justify-between"><div><p class="text-sm font-semibold text-slate-500">Resumo semanal</p><p class="mt-1 text-3xl font-extrabold text-slate-900">4 de 6</p></div><span class="grid h-14 w-14 place-items-center rounded-2xl bg-indigo-100 text-2xl text-indigo-700" aria-hidden="true">✓</span></div>
+        <div class="mt-6 h-3 overflow-hidden rounded-full bg-slate-100"><div class="h-full w-2/3 rounded-full bg-gradient-to-r from-indigo-500 to-emerald-400"></div></div>
+        <p class="mt-3 text-sm text-slate-500">Duas tarefas para fechar sua meta.</p>
+        <ul class="mt-6 space-y-3"><li class="flex items-center gap-3 rounded-xl bg-slate-50 p-3"><span class="h-2.5 w-2.5 rounded-full bg-emerald-500"></span><span class="text-sm font-medium text-slate-700">Revisar componentes React</span><span class="ml-auto text-xs font-semibold text-emerald-700">Feito</span></li><li class="flex items-center gap-3 rounded-xl bg-slate-50 p-3"><span class="h-2.5 w-2.5 rounded-full bg-amber-400"></span><span class="text-sm font-medium text-slate-700">Praticar Flexbox</span><span class="ml-auto text-xs font-semibold text-amber-700">Hoje</span></li></ul>
+      </aside>
+    </section>
+    <section id="recursos" class="mt-20">
+      <div class="max-w-2xl"><p class="text-sm font-bold uppercase tracking-widest text-indigo-600">Recursos</p><h2 class="mt-2 text-3xl font-extrabold tracking-tight text-slate-900">Tudo para avançar no seu ritmo.</h2><p class="mt-3 leading-7 text-slate-600">Pequenas ferramentas ajudam você a transformar planos em progresso.</p></div>
+      <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><span class="grid h-11 w-11 place-items-center rounded-xl bg-indigo-100 text-xl text-indigo-700">☷</span><h3 class="mt-4 text-lg font-bold text-slate-900">Tarefas claras</h3><p class="mt-2 text-sm leading-6 text-slate-600">Divida seu estudo em ações objetivas e acompanhe o que já concluiu.</p></article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><span class="grid h-11 w-11 place-items-center rounded-xl bg-emerald-100 text-xl text-emerald-700">✎</span><h3 class="mt-4 text-lg font-bold text-slate-900">Anotações práticas</h3><p class="mt-2 text-sm leading-6 text-slate-600">Guarde conceitos e ideias para encontrar tudo na hora da revisão.</p></article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:col-span-2 lg:col-span-1"><span class="grid h-11 w-11 place-items-center rounded-xl bg-amber-100 text-xl text-amber-700">↗</span><h3 class="mt-4 text-lg font-bold text-slate-900">Progresso visível</h3><p class="mt-2 text-sm leading-6 text-slate-600">Uma visão simples ajuda a celebrar etapas concluídas e planejar a próxima.</p></article>
+      </div>
+    </section>
+    <section class="mt-16 rounded-3xl bg-indigo-700 px-7 py-10 text-center text-white sm:px-12"><h2 class="text-2xl font-extrabold sm:text-3xl">Um passo de cada vez também é progresso.</h2><p class="mx-auto mt-3 max-w-xl leading-7 text-indigo-100">Comece com uma atividade pequena e construa uma rotina que funciona para você.</p><a class="mt-6 inline-flex rounded-xl bg-white px-5 py-3 font-bold text-indigo-700 hover:bg-indigo-50" href="../../atividade-react/">Ir para o Estuda+</a></section>
+  </main>
+  <footer class="border-t border-slate-200 bg-white px-6 py-6 text-center text-sm text-slate-500">Atividade de Frameworks CSS · Tailwind CSS</footer>
+</body>
+</html>
