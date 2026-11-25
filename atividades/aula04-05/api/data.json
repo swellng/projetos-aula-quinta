@@ -1,0 +1,6 @@
+{
+  "notas": [
+    { "id": "nota-html-css", "titulo": "Fundamentos de HTML e CSS", "texto": "HTML descreve a estrutura semântica da página. CSS controla apresentação, layout e adaptação a diferentes telas.", "criadoEm": "2026-11-24T12:00:00.000Z" },
+    { "id": "nota-react", "titulo": "Componentes React", "texto": "Componentes organizam a interface em partes reutilizáveis; props comunicam dados entre componentes.", "criadoEm": "2026-11-24T12:00:00.000Z" }
+  ]
+}

@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: estuda-mais-api
+    runtime: node
+    rootDir: atividades/aula04-05/api
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: FRONTEND_ORIGIN
+        sync: false

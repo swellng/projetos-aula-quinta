@@ -1,0 +1,14 @@
+{
+  "info": { "_postman_id": "7fc062a3-052d-4306-922f-e69d2da58c30", "name": "Estuda+ API — Aula 04 e 05", "description": "Consumo de horário e operações CRUD de anotações. Configure baseUrl para localhost:3000 ou URL pública.", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
+  "variable": [{ "key": "baseUrl", "value": "http://localhost:3000" }, { "key": "notaId", "value": "" }],
+  "item": [
+    { "name": "Aula 04 — Horário", "item": [{ "name": "Consultar data e horário", "request": { "method": "GET", "url": "{{baseUrl}}/api/horario" }, "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('responde 200', () => pm.response.to.have.status(200));", "pm.test('inclui data ISO e horário local', () => { const body = pm.response.json(); pm.expect(body.iso).to.be.a('string'); pm.expect(body.localDateTime).to.be.a('string'); });"] } }] }] },
+    { "name": "Aula 05 — CRUD de anotações", "item": [
+      { "name": "Listar anotações", "request": { "method": "GET", "url": "{{baseUrl}}/api/notas" }, "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('responde 200 com lista', () => { pm.response.to.have.status(200); pm.expect(pm.response.json()).to.be.an('array'); });"] } }] },
+      { "name": "Criar anotação", "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"titulo\": \"Anotação de teste\",\n  \"texto\": \"Conteúdo criado pela coleção Postman.\"\n}", "options": { "raw": { "language": "json" } } }, "url": "{{baseUrl}}/api/notas" }, "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('responde 201 e guarda ID', () => { pm.response.to.have.status(201); pm.collectionVariables.set('notaId', pm.response.json().id); });"] } }] },
+      { "name": "Consultar anotação", "request": { "method": "GET", "url": "{{baseUrl}}/api/notas/{{notaId}}" }, "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('responde 200', () => pm.response.to.have.status(200));"] } }] },
+      { "name": "Atualizar anotação", "request": { "method": "PUT", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"titulo\": \"Anotação atualizada\",\n  \"texto\": \"Conteúdo atualizado pela coleção Postman.\"\n}", "options": { "raw": { "language": "json" } } }, "url": "{{baseUrl}}/api/notas/{{notaId}}" }, "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('responde 200', () => pm.response.to.have.status(200));"] } }] },
+      { "name": "Excluir anotação", "request": { "method": "DELETE", "url": "{{baseUrl}}/api/notas/{{notaId}}" }, "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('responde 204', () => pm.response.to.have.status(204));"] } }] }
+    ] }
+  ]
+}
